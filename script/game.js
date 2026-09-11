@@ -59,10 +59,6 @@ function createGameCard(game) {
             <p>${game.description}</p>
 
             <div class="game-actions">
-                <a href="${game.page}" class="game-link">
-                    Learn more →
-                </a>
-
                 <a href="${action.url}"
                    class="game-link game-primary"
                    ${action.url.startsWith("http")
