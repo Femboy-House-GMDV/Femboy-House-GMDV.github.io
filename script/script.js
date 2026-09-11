@@ -104,7 +104,6 @@ function renderGames() {
 
 renderGames();
 
-```js
 const supportButton = document.querySelector(".support-button");
 const supportModal = document.querySelector(".support-modal");
 const supportClose = document.querySelector(".support-modal-close");
@@ -122,4 +121,3 @@ supportModal.addEventListener("click", (event) => {
         supportModal.classList.remove("open");
     }
 });
-```
