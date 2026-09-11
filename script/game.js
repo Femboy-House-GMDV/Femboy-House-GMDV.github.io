@@ -34,50 +34,43 @@ function getAction(game) {
 
 
 function createGameCard(game) {
-    const card = document.createElement("article");
-
-    card.className = "game-card";
-
     const action = getAction(game);
+
+    const imageContent = game.status === "development"
+        ? `
+            <div class="game-development">
+                <span>Contributing...</span>
+            </div>
+        `
+        : `
+            <img src="${game.image}" alt="${game.name}" loading="lazy">
+        `;
+
+    const card = document.createElement("article");
+    card.className = "game-card";
 
     card.innerHTML = `
         <div class="game-image">
-            <img
-                src="${game.image}"
-                alt="${game.name}"
-                loading="lazy"
-            >
+            ${imageContent}
         </div>
 
         <div class="game-content">
-
             <h3>${game.name}</h3>
-
-            <p>
-                ${game.description}
-            </p>
+            <p>${game.description}</p>
 
             <div class="game-actions">
-
-                <a
-                    href="${game.page}"
-                    class="game-link"
-                >
-                    Подробнее →
+                <a href="${game.page}" class="game-link">
+                    Learn more →
                 </a>
 
-                <a
-                    href="${action.url}"
-                    class="game-link game-primary"
-                    ${action.url.startsWith("http")
-                        ? 'target="_blank" rel="noopener noreferrer"'
-                        : ""}
-                >
+                <a href="${action.url}"
+                   class="game-link game-primary"
+                   ${action.url.startsWith("http")
+                       ? 'target="_blank" rel="noopener noreferrer"'
+                       : ""}>
                     ${action.text}
                 </a>
-
             </div>
-
         </div>
     `;
 
