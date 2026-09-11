@@ -103,3 +103,10 @@ function renderGames() {
 
 
 renderGames();
+
+const supportButton = document.querySelector(".support-button");
+const supportOptions = document.querySelector(".support-options");
+
+supportButton.addEventListener("click", () => {
+    supportOptions.classList.toggle("open");
+});

@@ -452,3 +452,128 @@ a {
     color: transparent;
     -webkit-text-fill-color: transparent;
 }
+
+.support-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.support-button {
+    cursor: pointer;
+}
+
+.support-options {
+    display: flex;
+    flex-direction: column;
+
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    margin-top: 0;
+
+    transition:
+        max-height 0.25s ease,
+        opacity 0.2s ease,
+        margin-top 0.25s ease;
+}
+
+.support-options.open {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 15px;
+}
+
+.support-option {
+    display: block;
+    text-decoration: none;
+}
+
+.support {
+    padding: 70px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.support-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.support-button {
+    margin-top: 20px;
+    padding: 13px 22px;
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    background: var(--surface);
+    color: var(--text);
+
+    font: inherit;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.support-button:hover {
+    background: var(--surface-hover);
+    border-color: #3a3a45;
+    transform: translateY(-2px);
+}
+
+.support-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    margin-top: 0;
+
+    transition:
+        max-height 0.25s ease,
+        opacity 0.2s ease,
+        margin-top 0.25s ease;
+}
+
+.support-options.open {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 15px;
+}
+
+.support-option {
+    min-width: 180px;
+
+    padding: 10px 16px;
+
+    border: 1px solid var(--border);
+    border-radius: 7px;
+
+    background: var(--surface);
+    color: var(--text-secondary);
+
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.support-option:hover {
+    background: var(--surface-hover);
+    color: var(--text);
+    border-color: #3a3a45;
+}
